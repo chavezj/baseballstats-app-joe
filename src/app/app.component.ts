@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { iProfile } from './interfaces/iprofile';
+import {MainService} from './shared/services/main.service';
+
 declare var $: any;
 @Component({
   selector: 'app-root',
@@ -16,7 +18,7 @@ export class AppComponent implements OnInit{
 
   years = ['2018','2017','2016','2015','2014']
 
-  constuctor(){}
+  constuctor(ms: MainService){}
   
   ngOnInit() {
 

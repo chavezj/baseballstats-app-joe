@@ -1,0 +1,32 @@
+[
+
+  {
+    "id": "1",
+    "league": "Camarillo Pony",
+    "division": "Pinto",
+    "season": "SPRING",
+    "year": "2019",
+    "title": "Opening Day",
+    "active": true,
+    "dateOfEvent": "2019-02-25T08:00:00.000Z",
+    "team": "TBD",
+    "vTeam": "TBD",
+    "timeOfEvent": null,
+    "dateCreated": "2018-11-26T08:00:00.000Z"
+  },
+  {
+    "id": "2",
+    "league": "Camarillo Pony",
+    "division": "Pinto",
+    "season": "FALL",
+    "year": "2018",
+    "title": "Game",
+    "active": false,
+    "dateOfEvent": "2018-11-18T08:00:00.000Z",
+    "team": "Angels",
+    "vTeam": "Diamondbacks",
+    "timeOfEvent": "3:00PM",
+    "dateCreated": "2018-11-23T08:00:00.000Z"
+  }
+
+]

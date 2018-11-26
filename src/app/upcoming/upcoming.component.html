@@ -36,62 +36,30 @@
             </div>
             <div class="avatar">
                 <img alt="" src="../assets/Images/calendar1.png">
-            </div>
-            <!-- <div class="info">
-                <div class="title text-center">
-    
-                     <a href="/profile">My Profile</a>
-                </div>
-    
-    
-            </div>
-            <div class="bottom">
-    
-            </div> -->
+            </div>           
     
         </div>
     </div>
     <div class="container whitebg">
         <div class="card-deck">
-    
-            
-    
-    
-            <div class="card">
+             <div class="card">
     
                 <div class="card-body" style="border: solid 1px #ccc; margin: 10px;">
                     <br/><br/>
                     <div class="card-deck">
-                        <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-                                <div class="card-header">Camarillo Pony - Pinto Spring 2019</div>
+                        <div class="col-sm-4" *ngFor="let u of upcoming">
+                        <div style="max-width: 18rem;" [class]="setStyles(u.active)">
+                                <div class="card-header">{{u.league}} {{u.division}}<br/> {{u.season}} {{u.year}}</div>
                                 <div class="card-body">
-                                    <h5 class="card-title">Opening Day: <br/> February 25, 2019</h5>
-                                    <p class="card-text">Team: TBD</p>
+                                    <h5 class="card-title">{{u.title}}: <br/> {{u.dateOfEvent | date: 'fullDate'}}</h5>
+                                    <p class="card-text">{{u.team}} vs {{u.vTeam}}
+                                        <span *ngIf="u.timeOfEvent">Time: {{u.timeOfEvent}}</span>
+                                    </p>
+
                                     <br />
                                 </div>
                             </div>
-                            <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
-                                    <div class="card-header">Camarillo Pony - Pinto Fall 2018</div>
-                                    <div class="card-body">
-                                      <h5 class="card-title">Game: <br/>November 18, 2019</h5>
-                                      <p class="card-text">Team: Angels vs Diamondbacks<br/>Time: 3:00PM</p>
-                                      <br/>
-                                    </div>
-                                  </div>
-                                  <!-- <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                                    <div class="card-header">Header</div>
-                                    <div class="card-body">
-                                      <h5 class="card-title">Success card title</h5>
-                                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    </div>
-                                  </div>
-                                  <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
-                                    <div class="card-header">Header</div>
-                                    <div class="card-body">
-                                      <h5 class="card-title">Danger card title</h5>
-                                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    </div>
-                                  </div> -->
+                        </div>
                         </div>
                     <br />
                 </div>

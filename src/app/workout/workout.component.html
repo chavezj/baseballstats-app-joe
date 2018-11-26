@@ -37,51 +37,24 @@
         <div class="avatar">
             <img alt="" src="../assets/Images/workout3.png">
         </div>
-        <!-- <div class="info">
-            <div class="title text-center">
-
-                 <a href="/profile">My Profile</a>
-            </div>
-
-
-        </div>
-        <div class="bottom">
-
-        </div> -->
-
+ 
     </div>
 </div>
 <div class="container whitebg">
     <div class="card-deck">
-
-        <!-- <div class="card">
-            <h4>Lighting</h4>
-        </div> -->
+    <div class="col-md-6" *ngFor="let t of training">
          <div class="card">
-                
-                    <div class="card-body" style="border: solid 1px #ccc; margin: 10px;">
-                        <h4>Lifting </h4>
-                        <div class="embed-responsive embed-responsive-16by9">
-                            
-                        </div>
-                        <br />
-                    </div>
+
+            <div class="card-body" style="border: solid 1px #ccc; margin: 10px;">
+
+                <h4>{{title}} </h4>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="560" height="315" [src]="t.youTubeUrl | safe:'resourceUrl'" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-        
-                <div class="card">
-        
-                        <div class="card-body" style="border: solid 1px #ccc; margin: 10px;">
-                   
-                            <h4>BP </h4>
-                        <div class="embed-responsive embed-responsive-16by9">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/XKZgJliUscM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
-                        </div>
-                        <br />
-                    </div>
-                </div> 
-
-        
-
-                    
+                <br />
+            </div>
+        </div>
+    </div>
 
     </div>

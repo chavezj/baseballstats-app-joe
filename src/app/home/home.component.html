@@ -33,9 +33,9 @@
 
         <div class="item" *ngFor="let image of mySlideImages;let i = index">
     
-        <div class="owl-small d-block d-sm-none"><h4>Yo whats up</h4></div>    
+        <div class="owl-small d-block d-sm-none"><h2>Determination</h2></div>    
         <div class="owl-text-overlay d-none d-sm-block">
-                <h2 class=""><div class="wow slideInRight">"{{image.part1}}<br/><span class="spacer"></span>{{image.part2}}" <i>-{{image.author}}</i></div></h2>
+                <h2 class=""><div class="wow slideInRight">{{image.part1}}<br/>{{image.part2}} <i> {{image.author}}</i></div></h2>
       </div> 
             <div>
 
@@ -156,21 +156,22 @@
     </div>
 </div>
 <div class="container whitebg">
-
-    <div class="card-deck">
+<div class="card-deck">
+    <div class="col-sm-6" *ngFor="let u of highlights">
         <div class="card">
 
             <div class="card-body">
 
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/pJReMMAkhac" frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" [src]="u.youTubeUrl | safe: 'resourceUrl'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                 </div>
                 <br />
             </div>
         </div>
+    </div>
 
-        <div class="card">
+        <!-- <div class="card">
 
             <div class="card-body">
 
@@ -180,7 +181,7 @@
                 </div>
                 <br />
             </div>
-        </div>
+        </div> -->
 
     </div>
 </div>
